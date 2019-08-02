@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    .header a,
+    .method a,
+    .ggmm a,
+    .type a,
+    .boot a{
+        color:gray;
+        text-decoration: none;
+    }
+    .tip a,
+    .method a{
+        text-decoration: none;
+    }
+    .method a:hover{
+        color:#E93854;
+        font-weight: bolder;
+    }
+    .tip a:hover,
+    .ggmm a:hover{
+        text-decoration: underline;
+    }
+    .header{
+        height:80px;
+    }
+    .header-a,
+    .bg,
+    .boot{
+        height:100%;
+        width: 990px;
+        margin:0 auto;
+    }
+    .header-a{
+        position: relative;
+        /* text-align: center; */
+        /* background-color:rgb(20, 220, 53); */
+        margin: 0 auto;
+    }
+    .header-a .logo{
+        float: left;
+        width:170px;
+        height:100%;
+        background: url('img/logo.png') no-repeat center;
+    }
+    .header-a .denglu:hover{
+        text-decoration: underline;
+    }
+    .wel{
+        float: left;
+        width:110px;
+        height:40px;
+        margin:30px 0 0 20px;
+        background: url('img/wel.png') no-repeat center;
+    }
+    .header .denglu{
+        position: absolute;
+        right:0;
+        bottom:10px;
+        text-indent: 20px;
+        background: url('img/q-icon.png') no-repeat left;
+    }
+    
+    .tip{
+        
+        height:40px;
+        background-color: #FFF8F0;
+        text-indent: 20px;
+        text-align: center;
+    }
+    .tip-s{
+        display: inline-block;
+        height:40px;
+        line-height: 40px;
+        text-indent: 20px;
+        color:gray;
+        font-size: 12px;
+        text-indent: 20px;
+        background: url(img/icon-tips.png) no-repeat left center;
+    }
+    .main{
+        height:460px;
+        background-color: #E93854;
+    }
+    .bg{
+        position: relative;
+        margin: 0 auto;
+        height:100%;
+        background: url(img/bg.png) no-repeat center center;
+    }
+    .login{
+        position: absolute;
+        right:0;
+        top:20px;
+        width:346px;
+        height:400px;
+        background-color: white
+    }
+    .login .top{
+        position: relative;
+        background-color: #FFF8F0;
+        text-align: center;
+    }
+    .top .method{
+        width:346px;
+        height:46px;
+        border-bottom: 1px solid gray
+    }
+    .top .method .qr{
+        float: left;
+        display: block;
+        width:172px;
+        height: 18px;
+        margin: 13.5px 0;
+        border-right: 1px solid gray;
+    }
+    .top .method .account{
+        float: left;
+        display: block;
+        width:173px;
+        height: 18px;
+        margin: 13.5px 0;
+    }
+    .top .method .account.active{
+        color:  #E93854;
+        font-weight: bold;
+    }
+    .msf{
+        /* position:absolute; */
+        /* text-align: center; */
+        /* left:20px;;
+        top:85px; */
+        width:306px;
+        height:30px;
+        margin:0 auto;
+    }
+    .input-user{
+        width:304px;
+        height:38px;
+        border:1px solid gray;
+        margin: 0 auto 30px;
+    }
+    .input-user .user-img{
+        float: left;
+        width:38px;
+        height:38px;
+        border-right:1px solid gray;
+        background: url(img/pwd-icons-new.png) no-repeat 0 -47px;
+    }
+    .input-user .user{
+        float: left;
+        outline: none;
+        width:211px;
+        height:14px;
+        padding: 10px 0 10px 50px;
+    }.input-password{
+        width:304px;
+        height:38px;
+        border:1px solid gray;
+        margin: 0 auto 30px;
+    }
+    .input-password .password-img{
+        float: left;
+        width:38px;
+        height:38px;
+        border-right:1px solid gray;
+        background: url(img/pwd-icons-new.png) no-repeat -47px -47px;
+    }
+    .input-password .password{
+        float: left;
+        outline: none;
+        width:211px;
+        height:14px;
+        padding: 10px 0 10px 50px;
+    }
+    .ggmm{
+        width:304px;
+        height:100%;
+        text-align: right;
+        margin: 0 20px 20px;
+    }
+    .pass{
+        width: 304px;
+        height:33px;
+        background-color: red;
+        margin: 0 auto 20px;
+        text-align: center;
+        color:white;
+        line-height: 33px;
+    }
+    .type{
+        position: relative;
+        right:0;
+        bottom:0;
+        width: 346px;
+        height: 51px;
+        font-size: 12px;
+    }
+    .type-qq{
+        float: left;
+        height:32px;
+        width:43px;
+        padding:18px 15px 0;
+     
+    }
+    .type-wx{
+        float: left;
+        height:32px;
+        width:48px;
+        /* background-color: blue; */
+        padding:18px 15px 0 0;
+        margin-left: 10px;
+    }
+    .icon{
+        float: left;
+        width:19px;
+        height:18px;
+    }
+    .icon.qq{
+        background: url('img/qq-wx.png') no-repeat ;
+    }
+    .icon.wx{
+      
+        background: url('img/qq-wx.png') no-repeat -19px;
+    }
+    .type-qq a{
+        float: left;
+        width:18px;
+        height: 18px;
+        margin-left:5px;
+        /* margin-right: 5px; */
+         /* border-right: 1px solid black; */
+    }
+    .type-wx a{
+        float: left;
+        margin-left:5px;
+    }
+    .type-reg{
+        position: absolute;
+        right:21px;
+        bottom:14.5;
+        width:77px;
+        height:32px;
+        padding-top:18px;
+        /* background-color: #E93854; */
+    }
+    .type a{
+        margin-left: 5px;
+    }
+    .icon.reg{
+        background: url('img/pwd-icons-new.png') no-repeat -102px -75px;
+    }
+    .shuxian{
+        float: left;
+        line-height: 50px;
+        color: gray;
+    }
+    .booter{
+        height:86p;
+    }
+    .boot{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .boot-a a{
+        margin:0 10px;
+    }
+    .boot .beian{
+        font-size: 16px;
+        color:gray;
+        margin:10px auto 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-a">
+            <a href="#" class="logo"></a>
+            <div class="wel"></div>
+            <a href="#" class="denglu">登陆页面，调查问卷</a>
+        </div>
+    </div>
+    <div class="tip">
+        <div class="tip-s">
+            依据《网络安全法》请尽快完成手机号验证！ 新版  <a href="#">《京东隐私政策》</a> 已上线，将更有利于保护您的个人隐私。
+        </div>
+    </div>
+    <div class="main">
+        <div class="bg">
+            <div class="login">
+                <div class="top">
+                    <div class="tip-s">
+                        京东不会以任何理由要求您转账汇款，谨防诈骗。
+                    </div>
+                    <div class="method">
+                        <a href="#" class="qr">扫码登录</a>
+                        <a href="#" class="account active">账户登陆</a>
+                    </div>
+                    <div class="msf"></div>
+                    <div class="input-user">
+                        <div class="user-img">
+                        </div>
+                        <input type="text" class="user" placeholder="账户名/手机号">
+                    </div>
+                    <div class="input-password">
+                        <div class="password-img">
+                        </div>
+                        <input type="password" class="password" placeholder="请输入密码">
+                    </div>
+                    <div class="ggmm">
+                        <a href="#" class="ggmm-in">更改密码</a>
+                    </div> 
+                </div>
+                <div class="pass">
+                    登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陆
+                </div>
+
+                <div class="type">
+                    <div class="type-qq">
+
+                        <div class="icon qq">
+    
+                        </div>
+                        <a href="#">QQ</a>
+                    </div>
+                    <span class="shuxian">|</span>
+                    <div class="type-wx">
+                        <div class="icon wx">
+
+                        </div>
+                        <a href="#">微信</a>
+                    </div>
+                    
+                    <div class="type-reg">
+                        <div class="icon reg">
+
+                        </div>
+                        <a href="">立即注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="booter">
+        <div class="boot">
+            <div class="boot-a">
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+                |
+                <a href="#" class="a">关于我们</a>
+            </div>
+            <div class="beian">
+                    Copyright © 2004-2019  京东JD.com 版权所有
+            </div>
+        </div>
+    </div>
+</body>
+</html>

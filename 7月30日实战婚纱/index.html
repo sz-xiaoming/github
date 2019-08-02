@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        /* 版心 */
+        .banner-c{
+            position: relative;
+            height: 720px;
+            width: 100%;
+            background: url('img/banner.png') no-repeat center;
+        }
+        .banner-c .left{
+            position: absolute;
+            top:316px;
+            left:250px;
+            display: block;
+            width: 50px;
+            height: 79px;
+            background: url('img/箭头left.png') no-repeat center;
+        }
+        .banner-c .right{
+            position: absolute;
+            top:316px;
+            right:250px;
+            display: block;
+            width: 50px;
+            height: 79px;
+            background: url('img/箭头right.png') no-repeat center;
+        }
+        /* 版心 */
+        .contant1{
+            position: relative;
+            width: 1200px;
+            height: 828px;
+            margin:0 auto;
+        }
+        .contant1 .contant1-item{
+            margin:80px auto 0 auto;
+            width:676px;
+            height:21px;
+        }
+        .contant1 .contant1-item a{
+            display: block;
+            color: #717171;
+        }
+        .contant1 .contant1-item li{
+            float: left;
+            margin: 0 46px;
+        }
+        .contant1 .contant1-item-img li{
+            float: left;
+            margin:0 20px;
+        }
+        .contant1 li .mr0{
+            margin-left:0;
+        }
+        .contant1 .contant1-item-img a{
+            display: block;
+            width: 270px;
+            height: 360px;
+        }
+        .contant1 .contant1-item-img{
+            width: 1240px;
+            height: 270px;
+            margin:55px auto 0 auto;
+        }
+        .contant1-item-img .contant1-items-img1{
+            background: url(img/girl1.png) no-repeat center;
+        }
+        .contant1-item-img .contant1-items-img2{
+            background: url(img/girl2.png) no-repeat center;
+        }
+        .contant1-item-img .contant1-items-img3{
+            background: url(img/girl3.png) no-repeat center;
+        }
+        .contant1-item-img .contant1-items-img4{
+            background: url(img/girl4.png) no-repeat center;
+        }
+        .contant1 .more{
+            position: absolute;
+            bottom: 60px;
+            left:525px;
+            width: 150px;
+            height: 45px;
+            background: url('img/MORE.png') no-repeat center;
+        }
+        /* 版心 */
+        .contant2{
+            margin:0 auto;
+            width: 1800px;
+            height: 100%;
+            background-color: #f9f9f9;
+        }
+        .contant2-c{
+            position: relative;
+            width: 1200px;
+            height: 556px;
+            margin:0 auto;
+        }
+        .contant2-item{
+            margin:63px auto 0 auto;
+        }
+        .contant2-item a{
+            display: block;
+            width: 270px;
+            height: 180px;
+            margin-right:40px;
+            float: left;
+        }
+        .contant2-item .contant2-items-img4{
+            margin-right: 0;
+        }
+        .contant2-item .contant2-items-img1{
+            background: url('img/zhubao1.png') no-repeat center;
+        }
+        .contant2-item .contant2-items-img2{
+            background: url('img/zhubao2.png') no-repeat center;
+        }
+        .contant2-item .contant2-items-img3{
+            background: url('img/zhubao3.png') no-repeat center;
+        }
+        .contant2-item .contant2-items-img4{
+            background: url('img/zhubao4.png') no-repeat center;
+        }
+        .contant2-c .more{
+            position: absolute;
+            bottom: 60px;
+            left:525px;
+            width: 150px;
+            height: 45px;
+            background: url('img/MORE.png') no-repeat center;
+        }
+        .contant3{
+            height:876px;
+            width: 1800px;
+            margin: 0 auto;
+            background: url('img/banner2.png') no-repeat 0 208px;            
+        }
+        .contant3-c{
+            position: relative;
+            height: 876px;
+            width: 1200px;
+            /* background-color: red; */
+            margin: 0 auto;
+        }
+        .contant3-item{
+            width: 1200px;
+            height: 334px;
+            margin:230px 0 0;
+        }
+        .contant3-item a{
+            float: left;
+            width: 300px;
+            height: 334px;
+        }
+        .contant3-item .contant3-items-img1{
+            background: url('img/activity1.png') no-repeat center;
+        }
+        .contant3-item .contant3-items-img2{
+            background: url('img/meinv.png') no-repeat center;
+        }
+        .contant3-item .contant3-items-img3{
+            background: url('img/activity2.png') no-repeat center;
+        }
+        .contant3-item .contant3-items-img4{
+            background: url('img/activity3.png') no-repeat center;
+        }
+        .contant3-c .more{
+            position: absolute;
+            bottom: 60px;
+            left:525px;
+            width: 150px;
+            height: 45px;
+            background: url('img/MORE.png') no-repeat center;
+        }
+        .designer{
+            width: 1800px;
+            height: 664px;
+            margin: 0 auto;
+            background: url('img/banner3.png') no-repeat center;
+        }
+        .designer-c{
+            position: relative;
+            width: 1200px;
+            height: 664px;
+            margin: 0 auto;
+        }
+        .designer-item{
+            position: absolute;
+            bottom: 0;
+            height: 453px;
+            width: 1200px;
+        }
+        .designer-item li{
+            position: relative;
+            float: left;
+            width: 365px;
+            height: 453px;
+            margin-right: 52.5px
+        }
+        .design div{
+            width: 180px;
+            height: 180px;
+            background: green;
+            margin: 0 auto;
+        }
+        /* 设计师图像 */
+        .design .designer1{
+            background: url('img/Man Standing on Street.png') no-repeat center;
+        }
+        .design .designer2{
+            background: url('img/Woman Standing Against Flowers.png') no-repeat center;
+        }
+        .design .designer3{
+            background: url('img/Woman Sitting in Grey Fur Sofa.png') no-repeat center;
+        }
+        .design .name{
+            margin-top: 25px;
+            text-align: center;
+            color: #f7f5f5;
+            font-size: 24px;
+        }
+        .design .job{
+            font-size: 12px;
+            margin-top:12px;
+            color: #a3a3a3;
+            text-align: center;
+        }
+        .design .introduce{
+            font-size: 12px;
+            margin-top:20px;
+            color: #b9b9b9;
+            text-align: center;
+        }
+        .design .more-bottom{
+            position: absolute;
+            left: 115px;
+            bottom: 60px;
+            width: 150px;
+            height: 27px;
+            background: url('img/MORE-bottom.png') no-repeat center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/head-boot.css">
+    <link rel="stylesheet" href="css/biaoti.css">
+</head>
+<body>
+    <div class="head">
+        <div class="head-c">
+            <a href="#" class="logo"></a>
+            <ul class="menu">
+                <li class="item active">
+                    <a href="#">首页</a>
+                    <span class="line"></span>
+                </li>
+                <li class="item">
+                    <a href="web/婚纱礼服详情/detail.html">婚纱礼服</a> 
+                    <span class="line"></span>
+                </li>
+                <li class="item">
+                    <a href="web/珠宝配饰/jewelry.html">珠宝配饰</a> 
+                    <span class="line"></span>
+                </li>
+                <li class="item">
+                    <a href="web/最新活动/activity.html">最新活动</a> 
+                    <span class="line"></span>
+                </li>
+                <li class="item mr">
+                    <a href="web/关于我们/about us.html">关于我们</a> 
+                    <span class="line"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-c">
+            <a href="#" class="left"></a>
+            <a href="#" class="right"></a>
+        </div>
+    </div>
+    <div class="contant1">
+        <p class="contant1-title">婚纱礼服</p>  
+        <p class="contant1-title-eng">Wedding Dress</p>
+        <div class="contant1-item">
+            <ul >
+                <li ><a href="#" class="contant1-items">新品/NEW</a></li>
+                <li ><a href="#" class="contant1-items">2018春夏</a></li>
+                <li ><a href="#" class="contant1-items">2018秋冬</a></li>
+                <li ><a href="#" class="contant1-items">专属定制</a></li>
+            </ul>
+        </div>
+        <div class="contant1-item-img">
+            <ul >
+                <li class="mr0" style="margin-left: 0;"><a href="#" class="contant1-items-img1"></a></li>
+                <li ><a href="#" class="contant1-items-img2"></a></li>
+                <li ><a href="#" class="contant1-items-img3"></a></li>
+                <li ><a href="#" class="contant1-items-img4"></a></li>
+            </ul>
+        </div>
+        <a href="#" class="more"></a>
+    </div>
+    <div class="contant2">
+        <div class="contant2-c">
+            <p class="contant1-title">珠宝配饰</p>  
+            <p class="contant1-title-eng">Jewelry Show</p>
+            <div class="contant2-item">
+                <ul>
+                    <li ><a href="#" class="contant2-items-img1"></a></li>
+                    <li ><a href="#" class="contant2-items-img2"></a></li>
+                    <li ><a href="#" class="contant2-items-img3"></a></li>
+                    <li ><a href="#" class="contant2-items-img4 mr0"></a></li>
+                </ul>
+            </div>
+            <a href="#" class="more"></a>
+        </div>
+    </div>
+    <div class="contant3">
+        <div class="contant3-c">
+            <p class="contant1-title">最新活动</p>  
+            <p class="contant1-title-eng">Latest Activities</p>
+            <div class="contant3-item">
+                <ul>
+                    <li ><a href="#" class="contant3-items-img1"></a></li>
+                    <li ><a href="#" class="contant3-items-img2"></a></li>
+                    <li ><a href="#" class="contant3-items-img3"></a></li>
+                    <li ><a href="#" class="contant3-items-img4"></a></li>
+                </ul>
+            </div>
+            <a href="web/最新活动/activity.html" class="more"></a>
+        </div>
+    </div>
+    <div class="designer">
+        <div class="designer-c">
+            <p class="contant1-title" style="color: #f7f5f5">设计师</p>  
+            <p class="contant1-title-eng" style="color: #c1c1c1">Designers</p>
+            <div class="designer-item">
+                <ul>
+                    <li >
+                        <div class="design">
+                            <div class="designer1">
+
+                            </div>
+                            <p class="name">Jason&nbsp;.&nbsp;W</p>
+                            <p class="job">首席设计师</p>
+                            <p class="introduce">法国时装设计师，VERONICA品牌创始人之一，设计<br>
+                                总监，2016福布斯最具影响力的设计师...</p>
+                            <a href="#" class="more-bottom"></a>
+                        </div>
+                    </li>
+                    <li >
+                        <div class="design">
+                            <div class="designer2">
+
+                            </div>
+                            <p class="name">颜澈</p>
+                            <p class="job">资深设计师</p>
+                            <p class="introduce">设计界的“设计鬼才”从题材到表现方式都引起了极大<br>
+                                的福布斯中国最具潜力，每一个产品都是我们精...
+                                </p>
+                            <a href="#" class="more-bottom"></a>
+                        </div>
+                    </li>
+                    <li style="margin-right: 0;">
+                        <div class="design">
+                            <div class="designer3">
+
+                            </div>
+                            <p class="name">Katherine&nbsp;.J</p>
+                            <p class="job">运营总监</p>
+                            <p class="introduce">The world's leading electronic design journal<br> 
+                                NEWWEBPICK recommended the designer...</p>
+                            <a href="#" class="more-bottom"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="boot">
+        <div class="boot-c">
+            <p class="mg-top">网站备案号：&nbsp;豫ICP备110121210号</p>
+            <p class="mg-bottom">增值电信业务经营许可证号：&nbsp;豫B2-20100033</p>
+            <ul class="boot-r">
+                <li>©2018 VERONICA</li>
+                <li class="lxwm"><a href="#">联系我们</a></li>
+                <li class="jrwm"><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

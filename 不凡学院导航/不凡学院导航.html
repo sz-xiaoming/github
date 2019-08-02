@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不凡学院导航</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        ul{
+            list-style: none;
+        }
+        .head .box a{
+            display: block;
+            text-decoration: none;
+            color:white;
+        }
+        .head{
+            position:relative;
+            margin:0 auto;
+            width:1000px;
+            height:70px;
+            background-color: black;
+            /* font-size: 0; */
+        }
+        img{
+            float: left;
+            margin-top:10px;
+            text-align: center;
+            height:50px;
+        }
+        .box{
+            position:absolute;
+            right:0;
+            top:0;
+            width: 400px;
+            height:70px;
+        }
+        /* buyao shiyong biaoqian xuanzeqi */
+        .box1{
+            float:left;
+            width:100px;
+            height:70px;
+            text-align:center;
+            line-height: 70px;
+        }
+        .box1:hover a{
+            /* a标签 不继承颜色 */
+            display: block;
+            color:black;
+            background-color:blue;
+        }
+        .box1:hover .inner-box{
+            display: block;
+            
+        }
+        .inner-box{
+            display: none;
+            
+        }
+        .box1 .inner-box .inner-box1:hover a{
+            background-color: green;
+            color:chocolate;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <img src="logo.png" alt="">
+        <ul class="box">
+            <li class="box1">
+                <a href="#">首页</a>
+            </li>
+            <li class="box1">
+                <a href="#">课程</a>
+                <ul class="inner-box">
+                    <li class="inner-box1">
+                        <a href="#">前端</a>
+                    </li>
+                    <li class="inner-box1">
+                        <a href="#">UI</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="box1">
+                <a href="#">我们</a>
+            </li>
+            <li class="box1">
+                <a href="#">新闻</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

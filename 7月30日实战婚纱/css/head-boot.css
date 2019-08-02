@@ -1,0 +1,89 @@
+﻿.head {
+    height: 80px;
+    background-color: #fff;
+}
+/* 版心 */
+.head-c,
+.boot-c {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.head-c .logo{
+    display: block;
+    width: 252px;
+    height: 100%;
+    background: url('../img/logo.png') no-repeat center;
+}
+.head-c .menu{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.menu .item{
+    position: relative;
+    float: left;
+    line-height: 80px;
+    margin: 0 14px;
+}
+.menu .item.mr{
+    margin-right: 25px;
+}
+.menu a{
+    display: block;
+    height:80px ;
+    width: 100%;
+    color: #666666;
+}
+.menu .line{
+    display: none;
+    position: absolute;
+    bottom:26px;
+    right:0;
+    height:2px;
+    width:70%;
+    background-color: #b9ab77;
+}
+.menu .item:hover .line{
+    display: block;
+}
+.menu .item:hover a{
+    color:#1d1d1d;
+}
+.menu .item.active a{
+    color:#1d1d1d;
+}
+.menu .item.active .line{
+    display: block;
+}
+.boot{
+    height:100px;
+}
+.boot-c .mg-top{
+    padding-top: 39px;
+    font-size: 12px;
+}
+.boot-c .mg-bottom{
+    margin-top: 13px;
+    font-size: 12px;
+}
+.boot-r{
+    position: absolute;
+    right:0;
+    top:44px;
+}
+.boot-r li{
+    float: left;
+    font-size: 12px;
+    color:#323232;
+}
+.boot-r .lxwm{
+    margin-left:62px
+}
+.boot-r .jrwm{
+    margin-left:69px
+}
+.boot-r a{
+    color:#323232;
+}

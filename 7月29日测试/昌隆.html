@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: gray;
+    }
+    .gs{
+        height: 37px;
+        background-color: #2e3139;
+    }
+    .head{
+        height: 100px;
+        background-color: #f2f2f2;
+    }
+    .banner{
+        height: 400px;
+        background-color: #1b5e92;
+    }
+    .contant{
+        height: 830px;
+        background-color: #f2f2f2;
+    }
+    .boot{
+        height: 204px;
+        background-color: #2e3139;
+    }
+    .gs-c,
+    .head-c,
+    .banner-c,
+    .contant-c,
+    .boot-c{
+        position: relative;
+        width:1000px;
+        height:100%;
+        margin: 0 auto;
+    }
+    .gs-c{
+        color: gray;
+        line-height:37px;
+    }
+    .gs-c .gs-r{
+        position: absolute;
+        top:0;
+        right:0;
+        color: gray;
+    }
+    .gs-r span{
+        padding: 0 15px;
+    }
+    .head-c .logo{
+        display: block;
+        width:180px;
+        height: 100%;
+        background:url('img/logo.png') no-repeat center;
+    }
+    .menu{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    .item{
+        position: relative;
+        float: left;
+        width:64px;
+        height: 100px;
+        line-height: 100px;
+        margin:0 10px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .item a{
+        display: inline-block;
+        width: 64px;
+        height: 100px;
+    }
+    .menu .line{
+        display: none;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width:84px;
+        height:2px;
+        background-color: #1b5e92;
+    }
+    .item:hover .line{
+        display: block;
+    }
+    .item.active .line{
+        display: block;
+    }
+    .banner-c{
+        background:url('img/banner.png') no-repeat center;
+    }
+    .pro-title{
+        position: relative;
+        height: 30px;
+        padding-top: 15px;
+        border-bottom: 1px solid gray;
+        padding-bottom: 15px;
+    }
+    .pro-title .maohao {
+        float: left;
+        width:6px;
+        height: 30px;
+        margin-right:10px;
+
+    }
+    .pro-title .maohao .dian{
+        width:6px;
+        height: 6px;
+        display: block;
+        margin-top: 7px;
+        background: #5a5a5a;
+    }
+    .pro-title .p1{
+        float: left;
+        font-size: 20px;
+        color: #5a5a5a;
+        margin-top: 2px;
+        margin-right:10px;
+    }
+    .pro-title .p2{
+        float: left;
+        font-size: 14px;
+        color: #5a5a5a;
+        margin-top: 7px;
+    }
+    .pro-title .more{
+        position: absolute;
+        bottom:19px;
+        right:5px;
+        color: gray;
+        border:1px solid gray;
+        border-radius: 2px;
+        background-color: #e9e9e9;
+    }
+    .pro-list{
+        height:180px;
+        margin:15px 0 20px 0;
+    }
+    .pro-list li{
+        float: left;
+    }
+    .pro-list .pro-text{
+        text-align: center;
+        color:gray;
+        margin: 10px 0;
+    }
+    .pro-item{
+        margin-right:5px;
+    }
+    .pro-item .img1{
+        display: block;
+        width: 244px;
+        height: 151px;
+        background: url('img/图层 19.png') no-repeat center;
+    }
+    .pro-item .img2{
+        display: block;
+        width: 244px;
+        height: 151px;
+        background: url('img/图层 17.png') no-repeat center;
+    }
+    .pro-item .img3{
+        display: block;
+        width: 244px;
+        height: 151px;
+        background: url('img/图层 16.png') no-repeat center;
+    }
+    .pro-item .img4{
+        display: block;
+        width: 244px;
+        height: 151px;
+        background: url('img/未标题-1.png') no-repeat center;
+    }
+    .com-contant .com{
+        display: inline-block;
+        width:300px;
+        height: 170px;
+        background: url('img/图层 4.png') no-repeat center;
+        margin-right: 10px;
+    }
+    .com-contant .jianjie{
+        display: inline-block;
+        width: 675px;
+        height: 170px;
+    }
+    .com-contant strong{
+        color: #3a3a3a;
+        font-size: 18px;
+    }
+    .com-contant{
+        color: gray;
+        margin:15px 0 20px 0;
+    }
+    .contact{
+        float: left;
+        width: 300px;
+        /* background-color:rgb(82, 82, 247); */
+        margin-right:27px;
+    }
+    .contact-1{
+        font-size: 15px;
+        margin-bottom:17px;
+        color: #4d4d4d;
+    }
+    .contact-1.shouhang{
+        margin-top:20px;
+    }
+    .news{
+        float: left;
+        width: 673px;
+        /* background-color: pink; */
+    }
+    .news-1{
+        font-size: 13px;
+        color: #3a3a3a;
+        margin-top: 22px;
+        margin-bottom: 15px;
+    }
+    .news .huidian{
+        float: left;
+        width: 4px;
+        height: 4px;
+        background-color: #b2b2b2;
+        display: block;
+        margin-top: 7px;
+    }
+    .news-1 .news-contant{
+        margin-left: 11px;
+        color: #3a3a3a;
+
+    }
+    .news-1 .date{
+        float:right;
+    }
+    .boot-c{
+        padding-top: 46px;
+    }
+    .boot-c p{
+        color: gray;
+        font-size: 13px;
+        padding-bottom: 20px;
+    }
+    .boot-c-1,
+    .boot-c-2,
+    .boot-c-3,
+    .boot-c-4{
+        text-align: center;
+    }
+    .boot-c .boot-a{
+        display: inline-block ;
+        padding:0 5px;
+    }
+    .ad{
+        width: 143px;
+        height: 183px;
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        margin-left:520px;
+        background: url('img/ad.png') no-repeat center;
+    }
+    .ad a{
+        position: absolute;
+        left:24px;
+        top:42px;
+        display: block;
+        width: 95px;
+        height: 34px;
+        /* border-radius: 1px */
+    }
+    </style>
+</head>
+<body>
+    <div class="gs">
+        <div class="gs-c">
+            欢迎莅临河南省巩义市昌隆精化有限公司！
+            <div class="gs-r">
+                <span class="shoucang"><a href="#">收藏本站</a></span>
+                |
+                <span class="shewei"><a href="#">设为首页</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="head-c">
+            <a href="#" class="logo"></a>
+            <ul class="menu">
+                <li class="item active">
+                    <a href="#">首页</a>
+                    <span class="line"></span>
+                </li>
+                <li class="item">
+                    <a href="#">公司简介</a> 
+                    <span class="line"></span>
+
+                </li>
+                <li class="item">
+                    <a href="#">产品中心</a> 
+                    <span class="line"></span>
+
+                </li>
+                <li class="item">
+                    <a href="#">新闻动态</a> 
+                    <span class="line"></span>
+
+                </li>
+                <li class="item">
+                    <a href="#">人才招聘</a> 
+                    <span class="line"></span>
+
+                </li>
+                <li class="item">
+                    <a href="#">关于我们</a> 
+                    <span class="line"></span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-c">
+
+        </div>
+    </div>
+    <div class="contant">
+        <div class="contant-c">
+            <div class="pro">
+                <div class="pro-title">
+                    <span class="maohao">
+                        <span class="dian"></span>
+                        <span class="dian"></span>
+                    </span>
+                    <span class="p1">产品中心</span>
+                    <span class="p2">Product</span>
+                    <a href="#" class="more">more></a>
+                </div>
+                <ul class="pro-list">
+                    <li class="pro-item">
+                        <div class="img1"></div>
+                        <p class="pro-text">速溶硅酸钠/粉状硅酸钠</p>
+                    </li>
+                    <li class="pro-item">
+                        <div class="img2"></div>
+                        <p class="pro-text">水玻璃</p>
+                    </li>
+                    <li class="pro-item">
+                        <div class="img3"></div>
+                        <p class="pro-text">固体硅酸钠</p>
+                    </li>
+                    <li class="pro-item">
+                        <div class="img4"></div>
+                        <p class="pro-text">硅溶胶</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="company">
+                <div class="pro-title">
+                    <span class="maohao">
+                        <span class="dian"></span>
+                        <span class="dian"></span>
+                    </span>
+                    <span class="p1">公司简介</span>
+                    <span class="p2">Company profile</span>
+                    <a href="#" class="more">more></a>
+                </div>
+                <div class="com-contant">
+                    <span class="com">
+
+                    </span>
+                    <p class="jianjie"><strong>河南省巩义市昌隆精化有限公司</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;巩义市昌隆精化有限公司位于人杰地灵的杜甫故里巩义市，成立于1999年，经过近17年的不懈努力,我们
+                        已成为国内最专业的硅酸钠类产品生产厂家，郑州地区居同行业之首。<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司主要生产固体、液体、粉状、钾钠等多种规格的泡花碱，其中年生产固体2万吨以上，液体5万吨速溶
+                        硅酸钠千余吨，并可根据用户需要生产特殊规格的泡花碱。我们以稳定的产品质量、优质的服务赢得了广大客
+                        户的信赖和支持，产品畅销全国以及世界各个国家和地区。公司在立足国内市场的同时，积极开拓国际市场。
+                        目前产品已销往东南亚、欧洲等国家和地区。公司愿与有志之士协同合作，互利共赢！</p>
+                </div>
+            </div>
+            <div class="con-boot">
+                <div class="contact">
+                    <div class="pro-title">
+                        <span class="maohao">
+                            <span class="dian"></span>
+                            <span class="dian"></span>
+                        </span>
+                        <span class="p1">联系我们</span>
+                        <span class="p2">Contact us</span>
+                    </div>
+                    <p class="contact-1 shouhang">电&nbsp;&nbsp;  话:&nbsp;&nbsp;0371-4124378</p>
+                    <p class="contact-1">手&nbsp;&nbsp;  机:&nbsp;&nbsp;13598855556（李经理）</p>
+                    <p class="contact-1">传&nbsp;&nbsp;  真:&nbsp;&nbsp;010-80210483</p>
+                    <p class="contact-1">邮&nbsp;&nbsp;  箱:&nbsp;&nbsp;clhg@163.com</p>
+                    <p class="contact-1">地&nbsp;&nbsp;  址:&nbsp;&nbsp;河南省巩义市北山口汽车站南200米</p>
+                </div>
+                <div class="news">
+                    <div class="pro-title">
+                        <span class="maohao">
+                            <span class="dian"></span>
+                            <span class="dian"></span>
+                        </span>
+                        <span class="p1">新闻动态</span>
+                        <span class="p2">News</span>
+                        <a href="#" class="more">more></a>
+                    </div>
+                    <div class="news-1">
+                        <span class="huidian"></span>
+                        <a href="#" class="news-contant">生产固体泡花碱销售前景如何</a>
+                        <span class="date">2016-07-05</span>
+                    </div>
+                    <div class="news-1">
+                        <span class="huidian"></span>
+                        <a href="#" class="news-contant">水玻璃的化学成分密度模数对水玻璃的性能有什么影响</a>
+                        <span class="date">2016-11-19</span>
+                    </div>
+                    <div class="news-1">
+                        <span class="huidian"></span>
+                        <a href="#" class="news-contant">昌隆泡花碱告知你硅酸钠水溶液的技术指标</a>
+                        <span class="date">2016-07-05</span>
+                    </div>
+                    <div class="news-1">
+                        <span class="huidian"></span>
+                        <a href="#" class="news-contant">生产固体泡花碱销售前景如何</a>
+                        <span class="date">2016-07-05</span>
+                    </div>
+                    <div class="news-1">
+                        <span class="huidian"></span>
+                        <a href="#" class="news-contant">生产固体泡花碱销售前景如何</a>
+                        <span class="date">2016-07-05</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boot">
+        <div class="boot-c">
+            <p class="boot-c-1">
+                <a href="#" class="boot-a">公司介绍</a>|
+                <a href="#" class="boot-a">产品中心</a>|
+                <a href="#" class="boot-a">网站新闻</a>|
+                <a href="#" class="boot-a">留言系统</a>|
+                <a href="#" class="boot-a">联系我们</a>|
+                <a href="#" class="boot-a">网站地图</a>
+            </p>
+            <p class="boot-c-2">
+                河南省巩义市昌隆精化有限公司&nbsp;&nbsp;&nbsp;公司地址：巩义市北山口汽车站南200米&nbsp;&nbsp;&nbsp;手机：13598855556
+            </p>
+            <p class="boot-c-3">
+                电话：0371-64124378 &nbsp;&nbsp;&nbsp;邮编：450000&nbsp;&nbsp;&nbsp;邮箱：gychanglong@163.com&nbsp;&nbsp;网址：http://www.clphj.com 
+            </p>
+            <p class="boot-c-4">
+                豫ICP备12013179号-1
+            </p>
+        </div>
+    </div>
+    <div class="ad">
+        <a href="#"></a>
+    </div>
+</body>
+</html>
