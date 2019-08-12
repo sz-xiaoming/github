@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // var arr = [ 21 , 31 , 14 , 8 , 1 ];
+
+    function chaxu(arr){ 
+        for( var i = 0 ; i < arr.length ; i++ ){
+            // 先拿一个数
+            var tep = arr [ i ];
+            // 将此数储存在一个地方
+            for( j = i - 1 ; j < arr.length - 1 ; j-- ){
+                // 与前一位的数进行比较
+                if( tep < arr [ j ] ){
+                    // 如果拿到的数比前一位数小的话，当j=-1时，arr[-1]不存在，则输出否定的操作，将最小值放置在第一位。
+                    arr [ j + 1 ] = arr [ j ];
+                    // 将前一位数后移
+                }else {
+                    arr [ j + 1 ] = tep;
+                    // 否则将拿到的数置于后一位
+                    break;
+                    // 重要的一点，如若发现比前一位大，则停止再与前面的数进行比较，否则容易卡死
+                }
+            }
+        }
+    console.log(arr);
+    } 
+    chaxu([3,5,1,8,9,12,30,10]);
+    </script>
+</body>
+</html>

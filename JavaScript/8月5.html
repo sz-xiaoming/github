@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var date = new Date();
+    console.log(date);
+    console.log(date.getMonth());
+    console.log(date.getTime());
+    var a = prompt('请输入您的年龄');
+    alert(a >= 18 && a <= 60 );
+    // 生成5-10的随机数
+    console.log(Math.floor(Math.random()*6+5));
+    // 生成0-99的随机数
+    console.log(Math.floor(Math.random()*100));
+    var score = parseInt(prompt('请输入您的数学成绩'));
+    if(score>85){
+        alert('优秀'); 
+    } else if(score>70){
+        alert('良好')
+    } else if(score>60){
+        alert('及格');
+    } else{
+        alert('不及格');
+    }
+    var date2 = new Date();
+    console.log(date2.getTime());
+    console.log(date2.getTime()-date.getTime());
+    </script>
+</body>
+</html>

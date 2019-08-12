@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // function gongshi(r) {
+    //     // var r = parseFloat( prompt ('请输入半径' ) ) ;
+    //     var s = Math.pow ( r , 2 ) * Math.PI
+    //     alert('半径为'+r+'的圆的面积是'+s);
+    //     var l = 2 * r * Math.PI ;
+    //     alert('半径为'+r+'的圆的周长是'+l);
+    // }
+    // gongshi(4);
+
+        // 将最小值一步步调至前面
+    // var arr = [ 7 , 2 , 20 , 15 , 35 , 0 , 1 ] ;
+    // for( var i = 0 ; i < arr.length - 1 ; i++ ){
+    //     // 从第‘一’位开始与后面的数进行比较  每次循环完成，第‘一’位将被选取，下一次循环的第一位数将后移一位
+    //     var min = i ;
+    //     // 每次循环假设第‘一’位就是最小值
+    //     for( var j = i + 1 ; j < arr.length ; j++ ){
+    //         // 挑选后一位与前一位进行比较
+    //         if( arr [ min ] > arr [ j ] ){
+    //             // 进行判断，最小值是否大于后一位
+    //            min = j;
+    //         //    是的话，将最小值的下角标转换为后一位的
+    //         }  //否则不改变最小值的下标
+    //     }
+    //     var a = arr [ i ] ;
+    //     // 将前一位的值留给第三方
+    //     arr [ i ] = arr [ min ] ;
+    //     // 将最小值赋给前一位
+    //     arr [ min ] = a;
+    //     // 将前一位的值赋给后一位
+    // }
+    // alert(arr);
+
+//    function paixu(arr){
+//        for( var i = 0 ; i < arr.length - 1 ; i++ ){
+//            var min= i ; 
+//            for( j = i + 1 ; j < arr.length ; j++ ){
+//                if( arr [ min ] > arr [ j ] ){
+//                    min = j ;
+//                }
+//            }
+//         var a = arr [ i ] ;
+//         arr [ i ] = arr [ min ] ;
+//         arr [ min ] = a ;
+//        }
+//         console.log( arr ); 
+//    }
+//    paixu(arr);
+
+        // 判断是不是质数
+//     function panduan ( a ) {
+//         var a = parseInt ( prompt ('请输入一个数字') ) ;
+//         var count = 0 ;
+//         // 变量的位置声明很重要
+//         for( var i = 1 ; i <= a ; i++ ){
+//             // 如果将count的声明放在这，则每次循环都会造成重新声明了count的值是0；
+//             // 那么永远都不会累加
+//             if( a % i === 0 ){
+//                 count =count + 1;
+//             }
+//         }
+//         if(count>2 ){
+//             alert( a+'不是一个质数')
+//         }else {
+//             alert( a+'是一个质数')
+//         }
+//     }
+//    panduan();
+
+    // 从小排到大   与  从大到小     只需要修改一下if判断的判断符号或者修改的条件
+    // arr = [ 45 , 23 , 12 , 15 , 2 ] ;
+    // function paixu(arr){
+    //     for ( var i = 0 ; i < arr.length - 1 ; i++ ){
+    //         var min = i ;        //假设每次循环的第一个数为最小值的下角标
+    //         for ( var j = i + 1 ;  j < arr.length ; j++ ){
+    //             if ( arr [ min ] > arr [ j ] ){
+    //                 min = j;
+    //             }
+    //         }
+    //         var a = arr [ i ] ;     //把每次循环的第‘一’位数将和最小值进行对调
+    //         arr [ i ] = arr [ min ] ;
+    //         arr [ min ] = a ;
+    //     }
+    //     alert(arr);
+    // }
+    // paixu(arr);
+
+        // 失败试验品（查找最小或最大值）
+    // for( var i = 0 ; i < arr.length - 1 ; i++){
+    //     var min = i ;
+    //     for( var j = i + 1 ; j < arr.length ; j++ ){
+    //         if( arr [ min ] > arr [ j ] ){
+    //             min = j;
+    //         }
+    //     }
+    // }
+    // alert(arr[min]);
+
+        // 选择排序
+    // arr = [ 45 , 23 , 12 , 1 , 15 , 2 ] ;
+    // for( i = 0 ; i < arr.length - 1 ; i++ ){
+    //     var min = i ;
+    //     for( j = i + 1 ; j < arr.length ; j++ ){
+    //         if( arr[ min ] > arr [ j ] ){
+    //             min = j;
+    //         }
+    //     }
+    //     var a = arr [ i ] ;
+    //     arr [ i ] = arr [ min ] ;
+    //     arr [ min ] = a ;
+    // }
+    // alert(arr);
+
+        // 查找最小值与最大值  方法：找到最小或者最大值的下角标
+    // for( i = 0 ; i < arr.length -1 ; i ++ ){
+    //     // 拿到第一个数开始
+    //     var min = 0 ;
+    //     // 假设最小的数的下角标就是第一个数
+    //     for( j = i + 1 ; j < arr.length ; j++ ){
+    //         // 拿到后面的数开始比较比较,先从后一位开始比较
+    //         if( arr[ min ] > arr [ j ] ){
+    //             // 拿最小值和后面的数比
+    //         min = j;
+    //         // 如果最小值比后面的数还大,则将后面的数的下角标赋给最小值.
+    //         }
+    //     }
+        
+    // }
+    // alert( arr[min]); 
+
+
+
+    // 将一组数中俩俩比较进行比较,暂定第一个数是最小值,如若前面的大于后面的,则将最小
+    // 下标赋给最小值,否则不进行
+    // arr = [ 45 , -1 , 23 , 12 , 50 , 1 , 15 , 2 , 0 ] ;
+    // function min ( arr ) {
+    //     var min = 0 ;
+    //     for(var j = 1 ; j < arr.length ; j++ ){
+    //         if(arr [ min ] > arr [ j ] ) {
+    //             min = j ;
+    //         }
+    //     }
+    // alert(arr[min]);
+    // }
+    // min(arr);
+
+    // function max ( arr ) {
+    //     var max = 0 ;
+    //     for(var j = 1 ; j < arr.length ; j++ ){
+    //         if(arr [ max ] < arr [ j ] ) {
+    //             max = j ;
+    //         }
+    //     }
+    // alert(arr[max]);
+    // }
+    // max(arr);
+
+
+    // 求n阶乘
+    function jc(n) {
+        if( n===1 ){
+            return 1;
+        }
+        return n*jc(n-1);
+    }
+    console.log(jc(3));
+
+    // 求n阶乘和
+    function jch(i){
+        if( i === 1 ){
+            return 1 ;
+        }
+        return jc(i) + jch(i-1);
+    }
+    console.log(jch(4));
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@
             position: absolute;
             top:316px;
             left:250px;
-            display: block;
+            /* display: block; */
             width: 50px;
             height: 79px;
             background: url('img/箭头left.png') no-repeat center;
@@ -30,6 +30,32 @@
             width: 50px;
             height: 79px;
             background: url('img/箭头right.png') no-repeat center;
+        }
+        .banner-c .page{
+            position: absolute;
+            bottom:20px;
+            left:920px;
+            height: 15px;
+            width: 15px;
+            background-color: rgb(107, 105, 105);
+            border:5px solid transparent;
+            border-radius: 50%;
+            background-clip: content-box;
+        }
+        .banner-c .page:hover{
+            position: absolute;
+            bottom:20px;
+            left:920px;
+            height: 15px;
+            width: 15px;
+            background-color: #fff;
+            border:5px solid gray;
+            border-radius: 50%;
+        }
+        .banner-c .page2.page{
+            position: absolute;
+            bottom: 20px;
+            left:960px;
         }
         /* 版心 */
         .contant1{
@@ -244,15 +270,23 @@
             height: 27px;
             background: url('img/MORE-bottom.png') no-repeat center;
         }
+        .get-back{
+            position: fixed;
+            right: 48px;
+            bottom: 48px;
+            width: 48px;
+            height: 48px;
+            background: url('img/回到顶部.png') no-repeat center;
+        }
     </style>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/head-boot.css">
     <link rel="stylesheet" href="css/biaoti.css">
 </head>
 <body>
-    <div class="head">
+    <div class="head" >
         <div class="head-c">
-            <a href="#" class="logo"></a>
+            <a href="#" class="logo" name="dingbu"></a>
             <ul class="menu">
                 <li class="item active">
                     <a href="#">首页</a>
@@ -281,6 +315,10 @@
         <div class="banner-c">
             <a href="#" class="left"></a>
             <a href="#" class="right"></a>
+            <a href="#" class="page page1">
+            </a>
+            <a href="#" class="page page2">   
+            </a>
         </div>
     </div>
     <div class="contant1">
@@ -392,5 +430,8 @@
             </ul>
         </div>
     </div>
+    <a class="get-back" href="#dingbu">
+        
+    </a>
 </body>
 </html>

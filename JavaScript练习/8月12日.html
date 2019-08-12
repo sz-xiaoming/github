@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- // 5 请把俩个数组[A1, A2, B1, B2, C1, C2, D1, D2] 和[A, B, C, D]，
+    // 合并为[A1, A2, A, B1, B2, B, C1, C2, C, D1, D2, D]。 -->
+    <script>
+        var arr1 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2'];
+        var arr2 = ['A', 'B', 'C', 'D'];
+        var final = [];
+        var j =0;
+        var temp =arr2[0];
+        for(var i = 0 ;i<arr1.length;i++){
+            if(arr1[i].indexOf(temp)!==-1){
+                final.push(arr1[i]);
+            }else{
+                final.push(temp);
+                temp=arr2[++j];
+                final.push(arr1[i]);
+            }
+        }
+        if(i=arr1.length){
+            final.push(temp);
+        }
+        console.log(final);
+    </script>
+</body>
+</html>

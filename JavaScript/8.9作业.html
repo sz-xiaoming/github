@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="douban.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 打印字符串 '电影名字:西虹市首富,导演:闫飞/彭大魔'
+        // console.log(movies);
+        // var subjects = movies.subjects ;
+        // for(i=0;i<subjects.length;i++){
+        //     console.log(subjects[i].title);
+        // }
+        // var i = 0;
+        // var directors =subjects[i].directors;
+
+        // 输出第一个影片的导演
+        // for (var j =0;j<movies.subjects[0].directors.length;j++){
+        //     console.log(movies.subjects[0].directors[j].name);
+        // }
+
+
+            // 第一题
+        // for(var i=0;i<movies.subjects.length;i++){
+        //     // 外循环输出电影的名字
+        //     var sum = '';
+        //     // sum用来累加导演的名字
+        //     for( var j=0;j<movies.subjects[i].directors.length;j++){
+        //         // 内循环输出导演的名字  寻找到每次外i循环的电影下的名字
+        //         if( j <movies.subjects[i].directors.length-1){
+        //             // 判断不是最后一个导演
+        //             sum=sum+movies.subjects[i].directors[j].name+'/';
+        //             // 不是的话，就在导演的名字后面加一个分隔符'/'
+        //         }else{
+        //             sum=sum+movies.subjects[i].directors[j].name;
+        //             // 是最后一个的话就直接输出导演的名字，不再添加分隔符
+        //         }
+        //     }
+        //     console.log('电影：'+movies.subjects[i].title+','+'导演：'+sum);
+        // }
+
+
+        //  第二题
+        // 方式一
+        // var arr = ['刘备', '张飞', '关羽'];
+        // var arr1 = arr.join('|');
+        // console.log(arr1);
+
+        // 方式二
+        // var arr = ['刘备', '张飞', '关羽'];
+        // function zhuanhuan(arr){
+        //     var sum = '';
+        //     for(var i = 0 ; i <arr.length; i++){
+        //         if(i<arr.length-1){
+        //             sum=sum+arr[i]+'|';
+        //         }else {
+        //             sum=sum+arr[i];
+        //         }
+        //     }
+        //     console.log(sum);
+        // }
+        // zhuanhuan(['刘备', '张飞', '关羽']);
+        
+
+        // 第三题
+        // 先选取第一个数，作为目标对象来检查在数列中出现的次数：优先去除
+        // 第一位的数，然后按照第一个数去查找下一个的位置，若输出为-1，则
+        // 放弃这个数将数字换为本次的第一个数，一次类推。。。
+        // var arr2 = ["c", "a", "z", "a", "a"] ;
+        // for(i = 0;;){
+        //     var arr3  = arr2.splice(1,1);
+        //     var clonearr3 = arr3; 
+        //     var count = 1 ;
+        //     var a = temp.indexOf(arr2[0])
+        //     if(a===-1){
+        //         // console.log(count);
+        //         return count;
+        //     }else{
+        //         var arr3  = arr2.splice(a,a);
+        //         count++;
+        //     }
+        // }
+
+        
+        // console.log(a);
+        // 先拿第一个数，用lastIndexOf拿到这个数最后一个下角标，下角标减起始标+1即为
+        // 这个数出现的次数，再根据上个数的最后下角标+1换到另外一个数，以此循环。。。
+        
+        // function count(a){
+        //     var b = a.sort();
+        //     for(var start = 0 ; start < b.length ; start = end + 1){
+        //         var end = b.lastIndexOf(b[start]);
+        //         var many = end - start + 1;
+        //         console.log(''+b[start]+'出现的次数是：'+many);
+        //     }
+        // }
+        // count(['c','a','z','b','a','a','a','c']);
+        
+       
+
+
+        // 第四题
+        // a~z 大写的ASCII码   65-90   小写的是  97-122
+        // function quanfan(a){
+        //     var b = '';
+        //     for(var i = 0 ; i < a.length ; i++ ){
+        //         if(a.charCodeAt(i)>=65  && a.charCodeAt(i)<=90){
+        //             b = b+ a.charAt(i).toLowerCase();
+        //         }else{
+        //             b = b+ a.charAt(i).toUpperCase();
+        //         }
+        //     }
+        //     console.log(b);
+        // }
+        // quanfan('ahDFljRgValfdGa');
+
+
+        // // 第五题
+        // 新建一个空的数组，从两个数组中每次拿元素，然后组成新的数组，必须使用两个
+        // 自变参数，一个控制在paixu1中的取值，一个控制paixu2中的取值。
+        var paixu1 = ['A1','A2','B1','B2','C1','C2','D1','D2'] ;
+        var paixu2 = ['A','B','C','D'] ;
+        var paixu = [] ;
+        var i =  0;
+        for(j = 0; j<paixu2.length; j ++){
+            paixu=paixu.concat(paixu1.slice(i,i+2));
+            i = i +2;
+            paixu=paixu.concat(paixu2.slice(j,j+1));
+        }
+        console.log(paixu);
+        
+        
+       
+
+        
+
+
+        // 第六题
+        // 6 工资的数组[1500,1200,2000,2100,2100,1800],把工资超过2000的删除
+        // function del2000(arr){
+        //     for(i = 0 ; i < arr.length ; i ++ ){
+        //         if(arr[i]>2000){
+        //             arr.splice(i,1);
+        //             // 如果删除了一个数组，则后面的数组向前移动，则需要把i后退一
+        //             // 下再自增一下才能继续判断本位置的情况
+        //             i--;
+        //         }
+        //     }
+        //     console.log(arr);
+        // }
+        // del2000([1500,1200,2000,2100,2100,1800]);
+        
+        
+    </script>
+</body>
+</html>

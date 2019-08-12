@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        // 数组的翻转
+        var arr = [11, 9, 3, 6, 2, 0];
+        // i 和 （arr.length-1）/2 可以等，也可以不等   例如7 和 5
+        // 等的话 7的话 i 能取到第四个数，但j也是取到倒数第4个数（顺数的第4个）
+        // 不等的话 5的话 i能取到第二个数，j能取到倒数第二个数，顺数的第三个数不动
+        for( var i = 0 ; i <( arr.length -1 )/ 2 ; i++ ){
+            var j = arr.length - i - 1;
+            var temp = arr [ i ] ;
+            arr [ i ] = arr [ j ] ;
+            arr [ j ] = temp ;
+        }
+        console.log(arr);
+
+        var date1 = new Date('2020-09-03');
+        var year = date1.getFullYear();
+        // console.log(year);
+        // console.log(date1);
+        var date = new Date('2020-01-01');
+        // console.log(date);
+        var day = ( date1 - date ) / 1000 / 60 / 60 / 24 + 1 ;
+        console.log(day);
+        // if( year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+        //     day = day + 1 ;
+        // } 
+        console.log(day);
+    </script> 
+</body>
+</html>

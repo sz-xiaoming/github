@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建构造函数来盛装对象
+        // this代指后面的命名的变量名
+        // say是一个函数
+    // function Movie(title , date ){
+    //     this.title = title ,
+    //     this.date = date ,
+    //     this.say  =function() {
+    //         alert("欢迎观看:"+title);
+    //     }
+    // }
+    // var movie = new Movie ('致青春 原来你还在这里' , '2018-02-05' );
+    // console.log(movie);
+    // movie.say();
+
+
+    function Douban(title , date , score ,actors){
+        this.title = title ;
+        this.date = date ;
+        this.score = score ;
+        this.actors = actors ;
+        this.tanchaung = function(){
+            alert ('请问你喜欢'+title+'吗？')
+        }
+    }
+    var movie1 = new Douban ( '窃听风云2','2018-03-04',0.86,['古天乐','梁家辉','梁青云'])
+    console.log(movie1);
+    movie1.tanchaung();
+
+
+
+    // 一个用object顶级法
+    // var a = new Object ();
+
+    // 一个用构造函数方法
+    // function Fanction(形参1，形参2...){
+    //     this.形参1=形参1；
+    //     this.形参2=形参2；
+    //     this.形参3 = function（）{}
+    // }
+    // var a = new Fanctio(实参1，实参2...);
+    </script>
+</body>
+</html>

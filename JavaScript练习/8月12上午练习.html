@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 1.同时求1-100之间所有偶数和奇数的和
+
+        2 .求整数1～100的累加值，但要求跳过所有个位为3的数
+        
+        3.编写一个方法去掉一个数组的重复元素['c', 'a', 'z', 'a', 'x', 'a']
+        ['c', 'a', 'z', 'a', 'x', 'a']  -> ['c', 'a', 'z', 'x']
+        
+        4."abcoefoxyozzopp"查找字符串中所有o出现的位置
+        
+        5.编写一个判断质数的方法 -->
+    <script>
+        // // 第一题
+        // function sum(n){
+        //     var oushuhe =0;
+        //     var jishuhe =0;
+        //     for(var i=1;i<=n;i++){
+        //         if(i%2===0){
+        //             oushuhe += i;
+        //         }else{
+        //             jishuhe += i;
+        //         }
+        //     }
+        //     console.log(oushuhe,jishuhe);
+        // }
+        // sum(100);
+
+        //  第二题
+        // function sum1(m){
+        //     var sum2=0;
+        //     for(var i =1;i<=m;i++){
+        //         if(i%10===3){
+
+        //         }else{
+        //             sum2 += i;
+        //         }
+        //     }
+        //     console.log(sum2);
+        // }
+        // sum1(100);
+
+        // 第三题
+        // function no_repeat(arr){
+        //     var newarr = [];
+        //     for(var i=0;i<arr.length;i++){
+        //         if(newarr.indexOf(arr[i])===-1){
+        //         // 当新的数组中寻找目标对象的下角标为-1时，则插入该目标对象
+        //             newarr.push(arr[i]);
+        //         }
+        //     }
+        //     console.log(newarr);
+        // }
+        // no_repeat(['c', 'a', 'z', 'a', 'x', 'a']);
+
+        // 第四题
+        // 4."abcoefoxyozzopp"查找字符串中所有o出现的位置
+
+        // 查找第一次出现o的位置，输出之后，再将这个位置的输出值输送给后面的参数起始
+        // function many(string) {
+        //     for(var i = 0 ; i <string.length;i=i+1){
+        //         var i = string.indexOf('o',i);
+        //         if(i===-1){
+        //             break;
+        //         }else{
+        //             console.log(i);
+        //         }
+        //     } 
+        // }
+        // many("abcoefoxyozzopp");
+
+
+        //第五题
+        // function isZhi(n){
+        //     var n =parseInt(prompt('请输入一个数')); 
+        //     var count = 0 ;
+        //     for(var i = 1 ; i <= n ; i++ ){
+        //         if(n%i===0){
+        //             count ++ ;
+        //         }
+        //     }
+        //     return count>2? n+'不是个质数':n+'是个质数';
+        //     // 三元运算符  比if else短
+        // }
+        // alert(isZhi(6));
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #yuan{
+            position: relative;
+            width: 1000px;
+            height: 1000px;
+            background-color: rgb(243, 247, 10);
+            margin: 0 auto;
+            padding: 200px;
+            border-radius: 50%;
+        }
+        #sanjiao1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 400px solid black;
+            /* border-top-width: 0; */
+            border-color: black transparent black transparent;
+            margin:0 auto;
+            border-radius: 50%;
+        }
+        #sanjiao2{
+            position: relative;
+            top:-1000px;
+            width: 200px;
+            height: 200px;
+            border: 400px solid rgb(243, 247, 10);
+            /* border-top-width: 0; */
+            border-color:transparent rgb(243, 247, 10) transparent  rgb(243, 247, 10);
+            margin:0 auto;
+            border-radius: 50%;
+        }
+        .neiyuan{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(10, 10, 10);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="yuan">
+        <div id='sanjiao1'>
+            <div class="neiyuan">
+
+            </div>
+        </div>
+        <div id='sanjiao2'>
+
+        </div>
+    </div>
+</body>
+</html>

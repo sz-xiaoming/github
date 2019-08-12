@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 第一题
+    // var a = parseInt(prompt('请输入'));
+    // if(a%5===0 && a%6===0){
+    //     alert('能被5和6 整除');
+    // } else if(a%5===0 && a%6!==0){
+    //     alert('能被5 整除,但不能被6整除');
+    // } else if(a%5!==0 && a%6===0){
+    //     alert('能被6 整除,但不能被5整除');
+    // } else{
+    //     alert('既不能被6 整除,也不能被5整除');
+    // }
+
+    // 第二题
+    // for(var b = 1;b<1000;b++){
+    //     if(b%5===0 && b%6===0){
+    //         console.log(b);
+    //     }
+    // }
+
+    // 第三题
+    // var c = parseInt(prompt('请输入一个数字'));
+    // for(var d = 1;d <= c; d++){
+    //     if(c%d===0){
+    //         console.log(d);
+    //     }
+    // }
+
+    // 第四题
+        // for(var e =1;e<=60;e++){
+        //     if(e%7===0 || e%10===7){
+                
+        //     }else{
+        //         console.log(e);
+        //     }
+        // }
+
+    // 第五题
+    // for(var f =1;f<=9;f++){
+    //     for(var g =0;g<=9;g++){
+    //         for(var h =0;h<=9;h++){
+    //         if(Math.pow(f,3)+Math.pow(g,3)+Math.pow(h,3)===f*100+g*10+h){
+    //             console.log(f,g,h)
+    //         }
+    //       }
+    //     }
+    // }
+    //   if(Math.pow(f,3)+Math.pow(g,3)+Math.pow(h,3)===f*100+g*10+h)  
+
+    // 第六题
+        // var sum =0;
+        // for(var i=1;i<=100;i++){
+        //     sum = sum + i;
+        // } console.log(sum) ;
+
+    // 第七题
+    // var j = parseInt(prompt('请输入需要计算阶乘的整数'));
+    // var sum2 = 1;
+    // for(;j>=1;j--){
+    //     sum2=sum2*j;
+    // }console.log(sum2);      
+
+    // 第八题
+    // var k = parseInt(prompt('请输入一个数字'));
+    // var count = 0;
+    // for(var l = 1;l <= k; l++){
+    //     if(k%l===0){
+    //         count=count+1;
+    //     }
+    // }console.log(count);
+
+
+    // 第九题
+    var k = parseInt(prompt('请输入一个数字'));
+    var count = 0;
+    for(var l = 1;l <= k; l++){
+        if(k%l===0){
+            count=count+1;
+        }
+    }
+    if(count>2){
+        alert(''+k+'不是质数')
+    }else{
+        alert(''+k+'是质数')
+    }
+
+    </script>
+</body>
+</html>
